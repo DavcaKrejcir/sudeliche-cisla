@@ -3,6 +3,8 @@ Module JednoduchyVstup
         Dim pocet As Integer
         Dim soucetLichych As Integer = 0
         Dim soucetSudych As Integer = 0
+        Dim pocetLichych As Integer = 0
+        Dim pocetSudych As Integer = 0
         Dim cislo As Integer
 
         Console.Write("Zadejte kladný poèet èísel: ")
@@ -20,13 +22,17 @@ Module JednoduchyVstup
 
             If cislo Mod 2 = 0 Then
                 soucetSudych += cislo
+                pocetSudych += 1
             Else
                 soucetLichych += cislo
+                pocetLichych += 1
             End If
         Next
 
-        Console.WriteLine("Souèet všech zadaných lichých èísel je: " & soucetLichych)
-        Console.WriteLine("Souèet všech zadaných sudých èísel je: " & soucetSudych)
+        Console.WriteLine("Poèet zadaných lichých èísel: " & pocetLichych)
+        Console.WriteLine("Souèet všech zadaných lichých èísel: " & soucetLichych)
+        Console.WriteLine("Poèet zadaných sudých èísel: " & pocetSudych)
+        Console.WriteLine("Souèet všech zadaných sudých èísel: " & soucetSudych)
         Console.WriteLine("Stisknìte libovolnou klávesu pro ukonèení...")
         Console.ReadKey()
     End Sub
